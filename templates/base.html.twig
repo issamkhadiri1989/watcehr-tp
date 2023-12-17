@@ -1,18 +1,72 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-            {{ ux_controller_link_tags() }}
-        {% endblock %}
+<!doctype html>
+<!--[if IE 7 ]>
+<html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zxx">
 
-        {% block javascripts %}
-{% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Watcher - Responsive Magazine Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,700i,900" rel="stylesheet">
+
+    <!-- Icon CSS -->
+    <link href="{{ asset('assets/css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ asset('assets/css/ts.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/js/slick/slick.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/js/lity/lity.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="wrapper">
+    {% block main %}{% endblock %}
+</div>
+
+<!-- jQuery -->
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{{ asset('assets/js/slick/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/socialShare.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.simpleWeather.min.js') }}"></script>
+<script src="{{ asset('assets/js/lity/lity.min.js') }}"></script>
+
+<!-- Theme JavaScript -->
+<script src="{{ asset('assets/js/main.js') }}"></script>
+
+<!-- Mailchimp Js -->
+<script src="{{ asset('assets/js/mc/jquery.ketchup.all.min.js') }}"></script>
+<script src="{{ asset('assets/js/mc/main.js') }}"></script>
+
+</body>
+
 </html>
+
